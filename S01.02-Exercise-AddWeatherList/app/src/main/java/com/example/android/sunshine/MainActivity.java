@@ -21,16 +21,17 @@ import android.support.v7.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     // TODO (1) Create a field to store the weather display TextView
-
+    private TextView weather_display;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
-
+        weather_display = (TextView)findViewById(R.id.tv_weather_display);
         // TODO (2) Use findViewById to get a reference to the weather display TextView
-
+       String[] weather_data ={"a","a","b","c"};
         // TODO (3) Create an array of Strings that contain fake weather data
-
+       for(String weather_day : weather_date)
+           weather_display.append(weather_day+"\n");
         // TODO (4) Append each String from the fake weather data array to the TextView
     }
 }
